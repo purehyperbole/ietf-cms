@@ -16,7 +16,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/github/ietf-cms/oid"
+	"github.com/purehyperbole/ietf-cms/oid"
 )
 
 // ASN1Error is an error from parsing ASN.1 structures.

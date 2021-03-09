@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/github/ietf-cms/oid"
+	"github.com/purehyperbole/ietf-cms/oid"
 	"golang.org/x/crypto/pkcs12"
 )
 

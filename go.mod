@@ -1,4 +1,4 @@
-module github.com/github/ietf-cms
+module github.com/purehyperbole/ietf-cms
 
 go 1.12
 

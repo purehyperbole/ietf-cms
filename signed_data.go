@@ -4,7 +4,7 @@ import (
 	"crypto/x509"
 	"encoding/asn1"
 
-	"github.com/github/ietf-cms/protocol"
+	"github.com/purehyperbole/ietf-cms/protocol"
 )
 
 // SignedData represents a signed message or detached signature.
@@ -47,6 +47,12 @@ func ParseSignedData(ber []byte) (*SignedData, error) {
 // the SignedData encapsulates something other than data (1.2.840.113549.1.7.1).
 func (sd *SignedData) GetData() ([]byte, error) {
 	return sd.psd.EncapContentInfo.DataEContent()
+}
+
+// GetRawData gets the encapsulated data from the SignedData. Nil will be returned
+// if this is a detached signature.
+func (sd *SignedData) GetRawData() ([]byte, error) {
+	return sd.psd.EncapContentInfo.EContentValue()
 }
 
 // GetCertificates gets all the certificates stored in the SignedData.
