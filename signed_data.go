@@ -87,3 +87,8 @@ func (sd *SignedData) IsDetached() bool {
 func (sd *SignedData) ToDER() ([]byte, error) {
 	return sd.psd.ContentInfoDER()
 }
+
+// SignerInfos returns the signing info
+func (sd *SignedData) SignerInfos() []protocol.SignerInfo {
+	return sd.psd.SignerInfos
+}
