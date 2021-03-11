@@ -122,6 +122,7 @@ var SignatureAlgorithmToX509SignatureAlgorithm = map[string]x509.SignatureAlgori
 	SignatureAlgorithmECDSAWithSHA384.String(): x509.ECDSAWithSHA384,
 	SignatureAlgorithmECDSAWithSHA512.String(): x509.ECDSAWithSHA512,
 	SignatureAlgorithmDSAWithSHA1.String():     x509.DSAWithSHA1,
+	SignatureAlgorithmRSAPSS.String():          x509.SHA256WithRSAPSS,
 }
 
 // X509PublicKeyAlgorithmToPKIXAlgorithmIdentifier maps certificate public key
